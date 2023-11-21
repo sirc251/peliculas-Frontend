@@ -1,0 +1,151 @@
+// Variables Sass
+$main-bg-color: #000;
+$text-color: #e1e1e1;
+$card-bg-color: rgba(0, 0, 0, 0.7);
+$card-border-color: #e1e1e1;
+$btn-primary-bg: #a2adb9;
+$btn-primary-hover-bg: #bc2828;
+
+body {
+  background-color: $main-bg-color;
+  font-family: 'Oswald', sans-serif;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 2;
+}
+
+header {
+  background-size: 100% auto;
+  background-position: center top 1px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  margin: 0 auto;
+  width: 100vw;
+  position: relative;
+}
+
+.card {
+  width: 18rem;
+  margin: 10px;
+  background-color: $card-bg-color;
+  color: $text-color;
+  border: 1px solid $card-border-color;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  .card-img-top {
+    object-fit: cover;
+    height: 12rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .card-text {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    background-color: $btn-primary-bg;
+    color: darken($text-color, 20%);
+    border: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    margin-top: 1rem;
+
+    &:hover {
+      background-color: $btn-primary-hover-bg;
+    }
+  }
+}
+
+.card-container {
+  display: flex;
+}
+
+.actor-image {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.comments {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+
+  h2 {
+    color: #fff; /* Cambiar el color del texto a blanco */
+  }
+  .comment {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+
+    h4 {
+      font-weight: bold;
+    }
+  
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// Requisito a. 5 variables Sass en el código
+
+.card-container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+  .card {
+    width: 100%;
+    max-width: 800px;
+    background-color: $card-bg-color;
+    color: $text-color;
+    border: 1px solid $card-border-color;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin: 0 auto;
+
+    .row.no-gutters {
+      .col-md-4 {
+        img {
+          width: 100%;
+          height: auto;
+          border-top-left-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+      }
+    }
+
+    .card-body {
+      padding: 20px;
+
+      .rating {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
